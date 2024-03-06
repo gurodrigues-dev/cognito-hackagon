@@ -72,7 +72,7 @@ func (ct *controller) Start() {
 	})
 
 	api := router.Group("/api/v1")
-	api.GET("/user", ct.getUser)
+	api.GET("/auth", ct.getUser)
 
 	router.Run(fmt.Sprintf(":%d", conf.Server.Port))
 
